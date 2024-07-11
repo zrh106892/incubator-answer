@@ -131,7 +131,7 @@ const Header: FC = () => {
     <Navbar
       variant={navbarStyle === 'theme-colored' ? 'dark' : ''}
       expand="lg"
-      className={classnames('sticky-top', navbarStyle)}
+      className={classnames('fixed-top', navbarStyle)}
       id="header">
       <Container className="d-flex align-items-center">
         <Navbar.Toggle
@@ -142,7 +142,6 @@ const Header: FC = () => {
             updateVisible();
           }}
         />
-
         <div className="d-flex justify-content-between align-items-center nav-grow flex-nowrap">
           <Navbar.Brand to="/" as={Link} className="lh-1 me-0 me-sm-5 p-0">
             {brandingInfo.logo ? (
@@ -199,7 +198,6 @@ const Header: FC = () => {
             )}
           </div>
         </div>
-
         <Navbar.Collapse id="navBarContent" className="me-auto">
           <hr className="hr lg-none mb-3" style={{ marginTop: '12px' }} />
           <Col lg={8} className="ps-0">

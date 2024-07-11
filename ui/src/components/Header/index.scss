@@ -17,13 +17,15 @@
  * under the License.
  */
 
-@import 'bootstrap/scss/functions';
-@import 'bootstrap/scss/variables';
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
 #header {
-  transform: translate3d(0,0,0);
+  transform: translate3d(0, 0, 0);
   --bs-navbar-padding-y: 0.75rem;
-  background: var(--bs-primary);
-  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15), 0 0.125rem 0.25rem rgb(0 0 0 / 8%);
+  background: rgba(var(--bs-primary-rgb), 0.2);
+  box-shadow:
+    inset 0 -1px 0 rgba(0, 0, 0, 0.15),
+    0 0.125rem 0.25rem rgb(0 0 0 / 8%);
   .logo {
     max-height: 2rem;
   }
@@ -45,7 +47,7 @@
   }
 
   .lg-none {
-    display: none!important;
+    display: none !important;
   }
 
   .hr {
@@ -57,8 +59,8 @@
     .placeholder-search {
       box-shadow: none;
       color: #fff;
-      background-color: rgba(255, 255, 255, .2);
-      border: $border-width $border-style rgba(255, 255, 255, .2);
+      background-color: rgba(255, 255, 255, 0.2);
+      border: $border-width $border-style rgba(255, 255, 255, 0.2);
       &:focus {
         border: $border-width $border-style $border-color;
       }
@@ -77,7 +79,7 @@
     .placeholder-search {
       box-shadow: none;
       color: var(--bs-body-color);
-      background-color: rgba(255, 255, 255, .2);
+      background-color: rgba(255, 255, 255, 0.2);
       border: $border-width $border-style #dee2e6;
       &:focus {
         border: $border-width $border-style $border-color;
@@ -89,25 +91,22 @@
   }
 
   .maxw-400 {
-    max-width: 400px;;
+    max-width: 400px;
   }
 }
-
 
 @media (max-width: 991.9px) {
   #header {
     .nav-grow {
-      flex-grow: 1!important;
+      flex-grow: 1 !important;
     }
 
     .lg-none {
-      display: flex!important;
+      display: flex !important;
     }
 
     .maxw-400 {
       max-width: 100%;
     }
   }
-
 }
-

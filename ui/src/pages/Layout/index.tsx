@@ -32,6 +32,7 @@ import {
   CustomizeTheme,
   PageTags,
   HttpErrorContent,
+  Banner,
 } from '@/components';
 import { LoginToContinueModal } from '@/components/Modal';
 import { changeTheme } from '@/utils';
@@ -44,7 +45,6 @@ const Layout: FC = () => {
   };
   const { code: httpStatusCode, reset: httpStatusReset } = errorCodeStore();
   const { show: showLoginToContinueModal } = loginToContinueStore();
-
   useEffect(() => {
     httpStatusReset();
   }, [location]);
@@ -74,6 +74,7 @@ const Layout: FC = () => {
           revalidateOnFocus: false,
         }}>
         <Header />
+        <Banner />
         {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
         <div className="position-relative page-wrap d-flex flex-column flex-fill">
           {httpStatusCode ? (

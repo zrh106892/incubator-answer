@@ -57,6 +57,27 @@ $ make ui
 $ make build
 ```
 
+### Dev
+
+#### 前端
+```bash
+$ cd ./ui
+$ pnpm install
+```
+##### 安装依赖
+```bash
+$ go mod download
+```
+#### 初始化配置
+```bash
+$ go run cmd/answer/main.go init -C ./answer-data
+```
+#### 运行
+```bash
+$ go run cmd/answer/main.go run -C ./answer-data
+```
+
+
 ## Contributing
 
 Contributions are always welcome!

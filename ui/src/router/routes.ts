@@ -57,15 +57,15 @@ const routes: RouteNode[] = [
       return guard.notForbidden();
     },
     children: [
-      // question and answer
+      // home page
+      {
+        index: true,
+        page: 'pages/Home',
+      },
       {
         // side nav layout
         page: 'pages/SideNavLayout',
         children: [
-          {
-            index: true,
-            page: 'pages/Questions',
-          },
           {
             path: 'questions',
             page: 'pages/Questions',
